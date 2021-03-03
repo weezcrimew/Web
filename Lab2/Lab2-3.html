@@ -1,0 +1,71 @@
+<html>
+<meta charset="utf-8">
+<head>
+  <title>Эдуард Салимов</title>
+</head>
+<script type="text/javascript" src="jquery.js"></script>
+<style>
+  body{
+    position: relative;
+  }
+  img {
+    position: absolute;
+    width: 300px;
+  }
+</style>
+
+<body>
+  <img src="img.jpg" id="img">
+
+  <script>
+    const item = $("#img")[0];
+    const height = window.innerHeight;
+    const width = window.innerWidth;
+    $(document).keyup(function (e) {
+      console.log(e.originalEvent.keyCode)
+      switch (e.which) {
+        case 37: // лево
+        if(item.offsetLeft > item.offsetWidth / 4){
+          $("#img").animate({
+            left: "-=100"
+          }, 10)
+        }
+          
+          break;
+
+        case 38: //вверх
+        if(item.offsetTop > item.offsetHeight / 4){
+          $("#img").animate({
+            bottom: "+=100"
+          }, 50)
+        }
+          
+          break;
+
+        case 39: //право
+        if(item.offsetLeft < width - (item.offsetWidth + item.offsetWidth / 3)){
+          $("#img").animate({
+            left: "+=100"
+          }, 50)
+        }
+          
+          break;
+
+        case 40: //вниз
+        if(item.offsetTop < height - (item.offsetHeight + item.offsetHeight / 4)){
+          $("#img").animate({
+            bottom: "-=100"
+          }, 50)
+        }
+          
+          break;
+
+        default:
+          return;
+      }
+      e.preventDefault(); 
+    });
+  </script>
+</body>
+
+</html>

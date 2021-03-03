@@ -1,0 +1,25 @@
+<html>
+<meta charset="utf-8">
+<head>
+  <title>Эдуард Салимов</title>
+</head>
+<script type="text/javascript" src="jquery.js"></script>
+<style>
+
+</style>
+<body>
+
+  <h1> X: <span id="x"></span></h1>
+  <h1> Y: <span id="y"></span></h1>
+
+<script>
+
+$(document).mousemove(function(e) {
+    $("#x").text(e.pageX);
+    $("#y").text(e.pageY);
+}).mouseover();
+
+</script>
+</body>
+
+</html>

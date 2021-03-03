@@ -1,0 +1,18 @@
+.reports{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.message-form{
+  display: flex;
+  flex-direction: column;
+}
+
+#send-button{
+  width: 150px;
+}
+
+.message{
+  border-bottom: 1px solid #000;
+}

@@ -1,0 +1,66 @@
+<html>
+<meta charset="utf-8">
+<head>
+  <title>Эдуард Салимов</title>
+</head>
+<script type="text/javascript" src="jquery.js"></script>
+<style>
+
+  .results {
+    display: none;
+  }
+</style>
+
+<body>
+  <h1 class="title">Выберите кандидата:</h1>
+  <div class="buttons">
+    <input type="button" value="Кандидат 1" class="button first">
+    <input type="button" value="Кандидат 2" class="button second">
+    <input type="button" value="Воздержусь" class="button third">
+  </div>
+  <h3 class="total"></h3>
+  <input type="button" value="Показать результаты" class="show-results">
+  <div class="results">
+    <h3 class="first-result"></h3>
+    <h3 class="second-result"></h3>
+    <h3 class="third-result"></h3>
+  </div>
+
+  <script>
+    let points = {
+      first: 0,
+      second: 0,
+      third: 0
+    }
+    let total = 0;
+
+    $(".button").click(function (e) {
+      let clickedButton = e.target.classList[1]
+      points[clickedButton] += 1
+      total += 1;
+      console.log(points)
+      $(".total").text("Всего проголосовало: " + total)
+      setResults()
+    })
+
+    function setResults() {
+      $(".first-result").text(`Проголосовавших за 'Кандидат 1:' ${points.first/total*100}%`)
+      $(".second-result").text(`Проголосовавших за 'Кандидат 2:' ${points.second/total*100}%`)
+      $(".third-result").text(`Воздержались: ${points.third/total*100}%`)
+    }
+
+    let isHiden = true
+    $(".show-results").click(function () {
+      if (!isHiden) {
+        $(".results").hide(100)
+        isHiden = true
+      } else {
+        $(".results").show(100)
+        isHiden = false
+      }
+
+    })
+  </script>
+</body>
+
+</html>

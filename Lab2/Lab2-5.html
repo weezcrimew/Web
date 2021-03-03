@@ -1,0 +1,52 @@
+<html>
+<meta charset="utf-8">
+<head>
+  <title>Эдуард Салимов</title>
+</head>
+<script type="text/javascript" src="jquery.js"></script>
+<style>
+  .drag {
+    position: absolute;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    background-color: rgb(185, 184, 184);
+    text-align: center;
+  }
+
+</style>
+
+<body>
+
+  <div class="drag">
+  </div>
+
+  <script>
+    let draggedItem = $(".drag");
+    let isMouseDown = false
+    draggedItem.mousedown(function () {
+      isMouseDown = true
+
+      function moveItem(e) {
+        draggedItem.offset({
+          top: e.pageY - 40,
+          left: e.pageX - 75
+        })
+      }
+
+      draggedItem.mousemove(function (e) {
+        if (isMouseDown) {
+          moveItem(e)
+        }
+      })
+    }).mouseup(function () {
+      isMouseDown = false
+
+    })
+  </script>
+</body>
+
+</html>
+

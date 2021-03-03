@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  outline: none;
+  font-size: 20px;
+}
+
+.wrap {
+  background: #fff;
+  width: 1020px;
+  margin: 100px auto;
+/*border: 1px solid black; */
+  border-radius: 2px;
+}
+
+.tours-list{
+  box-shadow:0px 0px 14px 0px rgba(50, 50, 50, 0.75);
+  border-radius: 4px;
+}
+
+.tours-list__img{
+  width: 200px;
+  float: left;
+  margin: 0px 10px 5px 0px;
+}
+
+.tour-price{
+  font-size: 2rem;
+  float: right;
+  color: #0475EB;
+}
+
+.tours-list__submit{
+  margin-top: 10px;
+}
+
+.reservation{
+  
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow:0px 0px 14px 0px rgba(50, 50, 50, 0.75);
+  display: grid;
+  grid-gap: 20px;
+}
+
+.reservation__total{
+  padding-top: 30px;
+  border-top: 1px solid rgb(175, 175, 175);
+  text-align: center;
+}
+
+.reservation__total span{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0475EB;
+}
+
+.reservation__options{
+  display: grid;
+  grid-gap:30px 50px;
+}
+
+.buttons{
+  display: flex;
+}
+
+#fio{
+  margin: 0;
+  outline: none;
+}
+
+#custom-handle-nights, #custom-handle-persons {
+  width: 2rem;
+  height: 1.4em;
+  top: 50%;
+  margin-top: -.8em;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+#slider-persons, #slider-nights{
+  margin-top: 10px;
+}
+
+#datepicker, #fio {
+  width: 80%;
+}
+
+.reservation__submit{
+  width: 50%;
+}
+
+#sign{
+  position: absolute;
+  text-align: center;
+  color: rgb(151, 151, 151);
+  font-size: 40px;
+  bottom: 0;
+}
+
+.jconfirm-holder{
+  width: 400px;
+  margin: auto auto;
+}
+
+.author{ 
+  position: fixed;
+  bottom: 0;
+}

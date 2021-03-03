@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Подбор билетов</title>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <div class="tours-list" id="accordion">
+      <h3>Эконом-класс</h3>
+      <div>
+        <img class="tours-list__img" src="./assets/econom.jpg">
+        <p>
+          Экономический класс – это своеобразный «воздушный плацкарт». Билеты в эконом-класс – самые дешевые, но при
+          этом на какие-то изыски в полете рассчитывать не приходится. Салон эконом-класса занимает большую часть
+          самолета – среднюю и хвостовую. Самолеты некоторых авиакомпаний оборудованы только салонами эконом-класса –
+          чаще всего такое встречается у лоукостеров.
+          <button class="tours-list__submit" data-price="5000">Выбрать</button>
+        </p>
+      </div>
+      <h3>Бизнес-класс</h3>
+      <div>
+        <img class="tours-list__img" src="./assets/bisnes.jpg">
+        <p>
+          Бизнес-класс – второй по распространенности класс обслуживания в самолете. Сиденья в бизнес-классе расположены
+          просторнее, чаще – по четыре в ряд. Встречаются самолеты, в которых сиденья в бизнес-классе располагаются по
+          шесть в ряд, но с большим интервалом между ними, чем в экономе. Кресла раскладываются – чаще всего до 160
+          градусов. В некоторых самолетах можно встретить кресла, которые трансформируются в полноценное спальное место,
+          то есть располагаются параллельно полу.
+          <button class="tours-list__submit" data-price="9000">Выбрать</button>
+        </p>
+      </div>
+      <h3>Первый класс</h3>
+      <div>
+        <img class="tours-list__img" src="./assets/first.jpg">
+        <p>
+          Первый класс – оплот роскоши в воздушных перевозках. Салоны первого класса можно встретить в самолетах,
+          которые выполняют дальние перелеты – например, трансконтинентальные. Сиденья в них могут представлять из себя
+          огороженное «купе» - с раздвижной дверью, кроватью внутри, индивидуальным освещением. Некоторые авиакомпании
+          предлагают пассажирам личные каюты, в которых есть гардероб, душ и кровать. Сиденья в первом классе выполнены
+          из дорогих материалов, оснащены массажным оборудованием. Это могут быть кресла, кровати или диваны. <br>
+          <button class="tours-list__submit" data-price="15000">Выбрать</button>
+        </p>
+      </div>
+    </div>
+
+    <div class="reservation">
+
+
+      <div class="reservation__options">
+        <div class="reservation__slider">
+          <p>Количество билетов:</p>
+          <div id="slider-persons">
+            <div id="custom-handle-persons" class="ui-slider-handle"></div>
+          </div>
+        </div>
+
+        <div class="reservation__gender">
+          <label for="gender">Ваш пол:</label>
+          <select name="gender" id="gender">
+            <option>Мужской</option>
+            <option>Женский</option>
+            <option selected="selected">Другое</option>
+          </select>
+        </div>
+
+        <div class="reservation__date">
+          <p>Дата поездки: </p> <input type="text" id="datepicker" size="30">
+        </div>
+
+        <div class="reservation__fio">
+          <p>Ваше ФИО:</p>
+          <input type="text" id="fio">
+        </div>
+
+        <div class="ui-widget">
+          <label for="tags">Страна назначения: </label>
+          <input id="tags">
+        </div>
+
+        <div class="buttons">
+          <button title="Отправка заявки на рассмотрение." id="confirm" class="reservation__submit">Подобрать</button>
+        </div>
+      </div>
+
+      <div class="reservation__total">
+        <p>Примерная стоимость полета:</p><br>
+        <span>.......</span>
+      </div>
+
+    </div>
+
+  </div>
+<span class="author">Эдуард Салимов</span>
+</body>
+<script src="./jq/jquery.js"></script>
+<script src="./jq/datepicker-ru.js"></script>
+<script src="./jq/jquery-ui.min.js"></script>
+<script src="./jq/jquery.jcarousel.min.js"></script>
+<script src="./jq/jquery-confirm.min.js"></script>
+<script src="./main.js"></script>
+
+</html>
