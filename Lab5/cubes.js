@@ -10,8 +10,16 @@
       schet : 0
     }
     let cubes = 1;
+    
 
     this.append(`<div class="game">
+    <div class = "zone" id = "cubeZone" >
+    <img class = "cube" src="./img/cube1.jpg" alt="1">
+    </div>
+    <div class = "zone" id = "dragZone"> 
+
+
+    </div>
     <div class="cubes">
       <span class="cubes-title">Введите кол-во кубиков</span>
       <input type="text" class="cubes-count">
@@ -37,6 +45,7 @@
     </div>
 
   </div>`);
+    
 
     $('.push').click(function(){
       $('.player-roll').removeClass('green')
