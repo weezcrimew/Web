@@ -66,31 +66,41 @@
     cubeZone.ondrop = drop;
 
     function drop(event){
-
-      let itemId = event.dataTransfer.getData('id');
-     
-    }
-
-    $('.push').click(function(){
       $('.player-roll').removeClass('green')
       $('.player-roll').removeClass('yellow')
       $('.computer-roll').removeClass('green')
       $('.computer-roll').removeClass('yellow')
-      $('.computer-img').removeClass('rotate360')
       $('.roll').text("");
+      let itemId = event.dataTransfer.getData('id');
+      roll();
+     
+    }
+  // <div class="cubes">
+    //   <span class="cubes-title">Введите кол-во кубиков</span>
+    //   <input type="text" class="cubes-count">
+    // </div>
+    function roll(){
+      // $('.player-roll').removeClass('green')
+      // $('.player-roll').removeClass('yellow')
+      // $('.computer-roll').removeClass('green')
+      // $('.computer-roll').removeClass('yellow')
+      // $('.computer-img').removeClass('rotate360')
+      // $('.roll').text("");
     
-      if ( $('.cubes-count').val() != ''){ cubes = +$('.cubes-count').val()}
-      $('.cubes').hide(399);
+      // if ( $('.cubes-count').val() != ''){ cubes = +$('.cubes-count').val()}
+      // $('.cubes').hide(399);
     
     
-      $('.player-img').addClass('rotate360')
+      // $('.player-img').addClass('rotate360')
     
     
-      player.brosok = random(cubes, cubes * 6)
+      player.brosok = random(1, 6)
       $('.player-roll').text(player.brosok)
       
       setTimeout(() => {
         computer.brosok = random(cubes, cubes * 6)
+       
+
         $('.computer-img').addClass('rotate360')
     
         $('.computer-roll').text(computer.brosok)
@@ -123,7 +133,7 @@
       }, 1000)
     
     
-    })
+    }
     
     $('.start').click(function(){
       location.reload()
