@@ -14,16 +14,13 @@
 
     this.append(`<div class="game">
     <div class = "zone" id = "cubeZone" >
-    <img class = "cube" src="./img/cube1.jpg" alt="1">
+    <img class = "cubeObj" id = "cubeObj" src="./img/cube3.jpg" alt="1" draggable= "true">
     </div>
-    <div class = "zone" id = "dragZone"> 
+    <div class = "zone" id = "dragZone">
+      <img id = "table" src = "https://st2.depositphotos.com/4137917/6072/i/600/depositphotos_60728253-stock-photo-realistic-poker-table.jpg">
+    </div>
 
-
-    </div>
-    <div class="cubes">
-      <span class="cubes-title">Введите кол-во кубиков</span>
-      <input type="text" class="cubes-count">
-    </div>
+  
     
 
     <div class="player game-section">
@@ -46,6 +43,33 @@
 
   </div>`);
     
+    const dragZone = document.querySelector('#dragZone');
+    const cubeZone = document.querySelector('#cubeZone');
+    let cubeObj = document.querySelector('.cubeObj');
+
+    dragZone.ondragover = allowDrop;
+    cubeZone.ondragover = allowDrop;
+
+    function allowDrop(event){
+        event.preventDefault();
+    }
+
+    cubeObj.ondragstart = drag;
+
+    function drag(event){
+        
+        event.dataTransfer.setData('id', event.target.id);
+        
+    }
+
+    dragZone.ondrop = drop;
+    cubeZone.ondrop = drop;
+
+    function drop(event){
+
+      let itemId = event.dataTransfer.getData('id');
+     
+    }
 
     $('.push').click(function(){
       $('.player-roll').removeClass('green')

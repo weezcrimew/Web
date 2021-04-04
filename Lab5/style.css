@@ -73,12 +73,24 @@ img {
   bottom: 0px;
 }
 
-.zone{
-display: flex;
+#dragZone{
+
+  display: flex;
+  justify-content: space-around;
+align-items: center;
+}
+#table{
+  height: 300px;
+  width: 600px;
+}
+
+#cubeZone{
+  display: flex;
     justify-content: space-around;
   align-items: center;
   margin-top: 10px;
   border: 1px solid black;
-  height: 70px;
+
   border-radius: 10px;
+  height: 70px;
 }
