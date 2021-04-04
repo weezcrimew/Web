@@ -9,6 +9,11 @@
   flex-direction: row;
   justify-content: center;
 }
+.checkboxwrap{
+  display: flex;
+  justify-content: center;
+
+
 }
 .res
 .rotate360 {
@@ -83,7 +88,7 @@ img {
   bottom: 0px;
 }
 
-#dragZone{
+.dragZone{
 
   display: flex;
   justify-content: space-around;
@@ -94,7 +99,7 @@ align-items: center;
   width: 600px;
 }
 
-#cubeZone{
+.cubeZone{
   display: flex;
     justify-content: space-around;
   align-items: center;
