@@ -13,8 +13,44 @@
 
   
   <div class="author">Эдуард Салимов</div>
+  <div class="wrapper">
 
+    <div id="switch">
+      <span>PVP</span>
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </div>
 
+<div class = "gameZone">
+    <div class="game">
+    <div class = "zone" id = "cubeZone" >
+    <img class = "cubeObj" id = "cubeObj" src="./img/cube3.jpg" alt="1" draggable= "true">
+    </div>
+    <div class = "zone" id = "dragZone">
+      <img id = "table" src = "https://st2.depositphotos.com/4137917/6072/i/600/depositphotos_60728253-stock-photo-realistic-poker-table.jpg">
+    </div>
+    <div class="zone"  id = "pvp"></div>
+  </div>
+    <div class="results">
+    <div class="player game-section">
+      <img class="player-img img" src="img/red.png" alt="">
+      <div class="player-roll roll"></div>
+      <span class="player-total total">Счет:</span>
+    </div>
+
+    <div class="computer game-section">
+      <img class="computer-img img" src="img/blue.png" alt="">
+      <div class="computer-roll roll"></div>
+      <span class="computer-total total">Счет:</span>
+    </div>
+
+    <div class="winner">&nbsp;</div>
+    <div class="buttons">
+      <input type="button" value="Заново" class="button start">
+    </div>
+  </div>
+  </div>
+</div>
 
 </body>
 <script src="cubes.js"></script>

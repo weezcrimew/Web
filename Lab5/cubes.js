@@ -11,42 +11,13 @@
     }
     let cubes = 1;
     
-
-    this.append(`<div class="game">
-    <div class = "zone" id = "cubeZone" >
-    <img class = "cubeObj" id = "cubeObj" src="./img/cube3.jpg" alt="1" draggable= "true">
-    </div>
-    <div class = "zone" id = "dragZone">
-      <img id = "table" src = "https://st2.depositphotos.com/4137917/6072/i/600/depositphotos_60728253-stock-photo-realistic-poker-table.jpg">
-    </div>
-
-  
-    
-
-    <div class="player game-section">
-      <img class="player-img img" src="img/red.png" alt="">
-      <div class="player-roll roll"></div>
-      <span class="player-total total">Счет:</span>
-    </div>
-
-    <div class="computer game-section">
-      <img class="computer-img img" src="img/blue.png" alt="">
-      <div class="computer-roll roll"></div>
-      <span class="computer-total total">Счет:</span>
-    </div>
-
-    <div class="winner">&nbsp;</div>
-    <div class="buttons">
-      <input type="button" value="Бросить!" class="button push">
-      <input type="button" value="Заново" class="button start">
-    </div>
-
-  </div>`);
-    
     const dragZone = document.querySelector('#dragZone');
     const cubeZone = document.querySelector('#cubeZone');
     let cubeObj = document.querySelector('.cubeObj');
-
+    let pvp = document.getElementById("switch");
+    if (pvp.checked == true){
+      console.log("check");
+    } 
     dragZone.ondragover = allowDrop;
     cubeZone.ondragover = allowDrop;
 
@@ -75,31 +46,17 @@
       roll();
      
     }
-  // <div class="cubes">
-    //   <span class="cubes-title">Введите кол-во кубиков</span>
-    //   <input type="text" class="cubes-count">
-    // </div>
+
     function roll(){
-      // $('.player-roll').removeClass('green')
-      // $('.player-roll').removeClass('yellow')
-      // $('.computer-roll').removeClass('green')
-      // $('.computer-roll').removeClass('yellow')
-      // $('.computer-img').removeClass('rotate360')
-      // $('.roll').text("");
-    
-      // if ( $('.cubes-count').val() != ''){ cubes = +$('.cubes-count').val()}
-      // $('.cubes').hide(399);
-    
-    
-      // $('.player-img').addClass('rotate360')
-    
-    
       player.brosok = random(1, 6)
+      document.getElementById("cubeObj").src="./img/cube"+player.brosok+
+      ".jpg";
+
       $('.player-roll').text(player.brosok)
       
       setTimeout(() => {
-        computer.brosok = random(cubes, cubes * 6)
-       
+        computer.brosok = random(1,6)
+        
 
         $('.computer-img').addClass('rotate360')
     
