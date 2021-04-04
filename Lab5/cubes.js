@@ -132,9 +132,9 @@
         
         if(player.schet == 6 || secondplayer.schet == 6){
           if(player.schet > secondplayer.schet){
-            $('.winner').text('Вы победили!')
+            $('.winner').text('Победил первый игрок!')
           } else {
-            $('.winner').text('Победил компьютер!')
+            $('.winner').text('Победил второй игрок!')
           }
           $('.push').prop('disabled', true)
      }  
